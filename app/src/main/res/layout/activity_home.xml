@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.newcar.refresh_load.PullToRefreshLayout
+        android:id="@+id/home_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/home_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp">
+                    </com.youth.banner.Banner>
+
+                    <RelativeLayout
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/title_search_back"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="60dp"/>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/sousuo"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="100dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="搜索"
+                            android:textColor="#9d9d9d"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="130dp"/>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/saoo"
+                            android:layout_marginRight="15dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <com.example.newcar.Home.utils.MyGridView
+                    android:id="@+id/home_hor_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:numColumns="4"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="5dp"
+                    android:padding="5dp"
+                    android:background="#fff">
+                </com.example.newcar.Home.utils.MyGridView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/maimai">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bantouming"/>
+
+                    <ImageView
+                        android:id="@+id/home_img_back"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/aq"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网红二手车"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/home_img_back"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/zaishou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="在售车:"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/home_img_back"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/home_selling_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="64"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/zaishou"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:text="|"
+                        android:textColor="#fff"
+                        android:layout_toRightOf="@+id/home_selling_num"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/yishou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已售车:"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/home_selling_num"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:id="@+id/home_selled_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1840"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/yishou"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/home_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:maxEms="10"
+                        android:text="吉林省长春市宽城区北凯旋路..."
+                        android:textColor="#fff"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toRightOf="@+id/home_img_back"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/home_address_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/dizhi"
+                        android:layout_toRightOf="@id/home_address"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="50dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="|"
+                        android:textColor="#fff"
+                        android:layout_toRightOf="@+id/home_address_img"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"/>
+
+                    <ImageView
+                        android:id="@+id/home_phone_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/weibiaoti"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="15dp"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最新上架"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.example.newcar.Home.utils.MyGridView
+                    android:id="@+id/home_ver_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2">
+                </com.example.newcar.Home.utils.MyGridView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </com.example.newcar.refresh_load.PullToRefreshLayout>
+
+</RelativeLayout>
