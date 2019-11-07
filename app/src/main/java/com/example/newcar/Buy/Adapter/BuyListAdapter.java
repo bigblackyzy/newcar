@@ -1,5 +1,8 @@
 package com.example.newcar.Buy.Adapter;
 import android.content.Context;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StrikethroughSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,8 +49,31 @@ public class BuyListAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.buy_listview,null);
             viewHolder.img = (ImageView)convertView.findViewById(R.id.buy_lv_img);
+            viewHolder.name = (TextView)convertView.findViewById(R.id.buy_id_name);
+            viewHolder.xinxi = (TextView)convertView.findViewById(R.id.buy_lv_xx);
+            viewHolder.time = (TextView)convertView.findViewById(R.id.buy_lv_time);
+            viewHolder.km = (TextView)convertView.findViewById(R.id.buy_lv_km);
+            viewHolder.area = (TextView)convertView.findViewById(R.id.buy_lv_area);
+            viewHolder.price = (TextView)convertView.findViewById(R.id.buy_id_price);
+            viewHolder.newprice = (TextView)convertView.findViewById(R.id.buy_id_price);
+            convertView.setTag(viewHolder);
+        }else {
+            viewHolder = (ViewHolder)convertView.getTag();
         }
-        return null;
+        viewHolder.img.setImageResource(model.getImg());
+        viewHolder.name.setText(model.getName());
+        viewHolder.xinxi.setText(model.getXinxi());
+        viewHolder.time.setText(model.getTime());
+        viewHolder.km.setText(model.getKm());
+        viewHolder.area.setText(model.getArea());
+        viewHolder.price.setText(model.getPrice());
+        SpannableString spannableString = new SpannableString(model.getNewprice());
+        StrikethroughSpan span = new StrikethroughSpan();
+        spannableString.setSpan(span,0,spannableString.length()-1+1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        if (viewHolder.newprice.length()>0){
+            viewHolder.newprice.setText("");
+        }
+        return convertView;
     }
 
     class ViewHolder{

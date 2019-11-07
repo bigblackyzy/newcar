@@ -7,9 +7,8 @@
 
     <ImageView
         android:id="@+id/buy_lv_img"
-        android:layout_width="130dp"
+        android:layout_width="110dp"
         android:layout_height="100dp"
-        android:layout_margin="10dp"
         android:src="@drawable/dq"
         android:scaleType="fitXY"/>
 
@@ -17,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="10dp">
+        android:layout_marginLeft="5dp">
 
         <TextView
             android:id="@+id/buy_id_name"

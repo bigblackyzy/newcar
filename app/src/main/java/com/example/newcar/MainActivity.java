@@ -1,7 +1,9 @@
 package com.example.newcar;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private SellFragment sellFragment;
     private MyFragment myFragment;
     private Fragment curragefragment;
+    private Dialog dialog;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +151,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 }else {
                     getSupportFragmentManager().beginTransaction()
                             .hide(curragefragment).show(sellFragment).commit();
-                    curragefragment = sellFragment;
                 }
                 break;
             case R.id.rb_my:
